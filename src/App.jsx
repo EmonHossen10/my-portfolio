@@ -1,4 +1,5 @@
 import "./App.css";
+import AboutMeMain from "./Components/AboutMeSection/AboutMeMain";
 import HeroGradient from "./Components/HeroSection/HeroGradient";
 import HeroMain from "./Components/HeroSection/HeroMain";
 import Navbar from "./Components/Navbar/Navbar";
@@ -12,6 +13,7 @@ function App() {
         <HeroMain></HeroMain>
         <HeroGradient></HeroGradient>
         <SubHeroMain></SubHeroMain>
+        <AboutMeMain></AboutMeMain>
       </main>
     </>
   );
