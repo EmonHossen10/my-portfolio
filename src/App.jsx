@@ -1,5 +1,6 @@
 import "./App.css";
 import AboutMeMain from "./Components/AboutMeSection/AboutMeMain";
+import ContactMeMain from "./Components/ContactMe/ContactMeMain";
 import ExperienceMain from "./Components/Experience Section/ExperienceMain";
 import HelperSection from "./Components/HelperSection";
 import HeroGradient from "./Components/HeroSection/HeroGradient";
@@ -23,6 +24,7 @@ function App() {
         <SubSkills></SubSkills>
         <ExperienceMain></ExperienceMain>
         <ProjectMain></ProjectMain>
+        <ContactMeMain></ContactMeMain>
         {/* here under is helper section */}
         <HelperSection></HelperSection>
       </main>
