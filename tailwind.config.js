@@ -37,6 +37,7 @@ module.exports = {
         orangeMediumShadow: "10px 10px 2000px 150px rgba(240, 169, 79, 0.5)",
       }
     },
+    
     fontFamily: {
       body: ["Josefin sans"],
       special: ["Roboto"],

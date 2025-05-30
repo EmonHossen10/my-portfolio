@@ -14,7 +14,7 @@ const AboutMeImg = () => {
     // </div>
 
     <div>
-      <img className="rounded-2xl" src="../../public/images/emon5.jpg" alt="About Me Image" />
+      <img className="rounded-2xl" src="../../public/images/emon5.jpg" alt="About Me Image" />1
     </div>
   );
 };
