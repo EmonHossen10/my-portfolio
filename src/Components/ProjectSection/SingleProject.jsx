@@ -15,7 +15,7 @@ const SingleProject = ({ project }) => {
           className="w-full h-48 object-cover transition-transform duration-500 ease-in-out hover:scale-125"
         />
         <div className="p-6 text-white flex flex-col flex-grow">
-          <h2 className="text-xl font-bold mb-2">{name}</h2>
+          <h2 className="text-2xl text-orange  font-bold mb-2">{name}</h2>
           <p className="text-sm mb-4 flex-grow">{description}</p>
           <div>
             {tags.map((tag, i) => (
