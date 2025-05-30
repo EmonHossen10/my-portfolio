@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../framerMotion/variants";
 
 import ProjectButtons from "./ProjectButtons";
 
@@ -8,7 +10,13 @@ const SingleProject = ({ project }) => {
   return (
     <section>
       {/* my card here */}
-      <div className="bg-[#0a1a2b] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full">
+      <motion.div
+        variants={fadeIn("left", 0)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }}
+        className="bg-[#0a1a2b] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full"
+      >
         <img
           src={picture}
           alt={name}
@@ -36,7 +44,7 @@ const SingleProject = ({ project }) => {
             githubLink={githubLink}
           ></ProjectButtons>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

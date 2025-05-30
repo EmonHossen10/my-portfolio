@@ -7,3 +7,13 @@
 body {
   @apply bg-darkBrown;
 }
+
+/* Force the underline to show when active */
+.active-link + div {
+  width: 100% !important;
+}
+
+/* Optional: Style the active link text */
+.active-link {
+  color: #06b6d4 !important; /* Cyan text */
+}

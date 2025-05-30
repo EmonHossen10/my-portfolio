@@ -1,15 +1,21 @@
-import React from "react";
-import { PiHexagonThin } from "react-icons/pi";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../framerMotion/variants";
 
 const HeroPic = () => {
   return (
-    <div className=" h-full  flex items-center justify-center  ">
+    <motion.div
+      variants={fadeIn("left", 0.4)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0 }}
+      className=" h-full  flex items-center justify-center  "
+    >
       <img
         className="max-h-[500px] w-auto  rounded-xl  "
         src="../../public/images/emon4.jpg"
         alt=""
       />
-    </div>
+    </motion.div>
   );
 };
 

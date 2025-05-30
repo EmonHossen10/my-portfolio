@@ -1,16 +1,31 @@
 import React from "react";
 import AboutMeText from "./AboutMeText";
 import AboutMeImg from "./AboutMeImg";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../framerMotion/variants";
 
 const AboutMeMain = () => {
   return (
-    <div className="flex md:flex-row sm:flex-col gap-12 px-4 max-w-[1000px] mx-auto mt-[100px] justify-between items-center  ">
-      <div>
+    <div
+      id="about"
+      className="flex md:flex-row sm:flex-col gap-12 px-4 max-w-[1000px] mx-auto mt-[100px] justify-between items-center  "
+    >
+      <motion.div
+        variants={fadeIn("down", 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.7 }}
+      >
         <AboutMeText></AboutMeText>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        variants={fadeIn("left", 0)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.7 }}
+      >
         <AboutMeImg></AboutMeImg>
-      </div>
+      </motion.div>
     </div>
   );
 };
