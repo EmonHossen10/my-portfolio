@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 import { TypeAnimation } from "react-type-animation";
+import Socials from "../Socials";
+import { Link } from "react-router-dom";
+import { FiDownload } from "react-icons/fi";
 
 const HeroText = () => {
   return (
@@ -61,6 +64,34 @@ const HeroText = () => {
         to build innovative solutions that drive business growth and deliver
         exceptional user experiences.
       </motion.p>
+      <div>
+        {/* resume and github abd linlkedin */}
+        <motion.div
+          variants={fadeIn("up", 0.6)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0 }}
+          className=" flex flex-col lg:flex-row items-center  gap-8"
+        >
+          <Link to="https://drive.google.com/uc?export=download&id=1Z6jG2V0ynV_jmY3b00N9lVaOptvN3icM">
+            <button
+              className="flex items-center gap-3  font-semibold  border border-basic px-10 py-3 rounded-full hover:bg-cyan hover:text-black text-cyan
+              transition-all duration-300 
+              "
+            >
+              <span>Resume</span>
+              <FiDownload></FiDownload>
+            </button>
+          </Link>
+
+          <Socials
+            containerStyle="flex gap-4 "
+            iconStyle="w-12 h-12 border border-basic  rounded-full  flex  items-center justify-center   
+              hover:bg-cyan hover:text-black text-cyan transition-all duration-600
+              "
+          ></Socials>
+        </motion.div>
+      </div>
     </div>
   );
 };

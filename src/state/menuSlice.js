@@ -17,3 +17,4 @@ const menuSlice = createSlice({
 
 export const menuReducer = menuSlice.reducer;
 export const { toggleMenu } = menuSlice.actions;
+

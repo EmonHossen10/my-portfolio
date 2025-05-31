@@ -5,13 +5,14 @@ import { toggleMenu } from "../../state/menuSlice";
 const NavbarToggler = () => {
   const dispatch = useDispatch();
 
-  const setToggleMenu = () => {
+  const handleToggleMenu = () => {
     dispatch(toggleMenu());
   };
+  
   return (
     <button
-      className="text-2xl p-3 border border-orange rounded-full"
-      onClick={setToggleMenu}
+      className="md:text-2xl p-2 border border-orange rounded-full"
+      onClick={handleToggleMenu}
     >
       <GiHamburgerMenu />
     </button>

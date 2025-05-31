@@ -20,14 +20,14 @@ const experiences = [
     responsibilities: [
       "Gained expertise in front-end development with React.js.",
       "Building responsive and interactive user interfaces.",
-      "Proficient in HTML, CSS,Tailwind,JavaScript",
+      "Proficient in HTML, CSS,Tailwind,JS",
     ],
   },
   {
     job: "Backend Part",
     date: "2023 - Present",
     responsibilities: [
-      "Specialized in back-end development using Node.js and Express.js.",
+      "Specialized in back-end development.",
       "Experienced in making RESTful APIs",
       "Managing databases with MongoDB.",
       "Ensuringsecure server-side operations.",

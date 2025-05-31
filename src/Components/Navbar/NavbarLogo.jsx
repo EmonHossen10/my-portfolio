@@ -9,9 +9,11 @@ const NavbarLogo = () => {
         </h1>
       </a>
 
-      <h2 className="text-white font-special font-bold text-2xl sm:block md:hidden">
-        Emon
-      </h2>
+      <a href="#">
+        <h2 className="text-white font-special font-bold text-2xl sm:block md:hidden">
+          Emon
+        </h2>
+      </a>
     </div>
   );
 };
