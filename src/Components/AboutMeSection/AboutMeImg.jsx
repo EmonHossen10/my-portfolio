@@ -1,11 +1,13 @@
 import React from "react";
 
+import image from "../../../public/images/emon5.jpg"
+
 const AboutMeImg = () => {
   return (
     <div>
       <img
         className="rounded-2xl"
-        src="../../public/images/emon5.jpg"
+        src={image}
         alt="About Me Image"
       />
     </div>
