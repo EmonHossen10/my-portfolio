@@ -15,7 +15,7 @@
 | Next.js | SSR/SSG support |
 | Tailwind CSS | Styling |
 | Framer Motion | Animations |
-| React Icons | 
+| React Icons | Icons   |
 
 ### Backend
 | Technology | Usage |
@@ -34,7 +34,7 @@
 ### Prerequisites
 - Node.js (v18+)
 - npm (v9+)
-- MongoDB Atlas account (for database)
+
 
 ### Setup
 1. Clone the repository
