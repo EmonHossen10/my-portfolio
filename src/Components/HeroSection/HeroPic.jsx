@@ -8,7 +8,7 @@ const HeroPic = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0 }}
-      className=" h-full  flex items-center justify-center  "
+      className=" h-full w-full flex  items-center justify-center "
     >
       <img
         className="max-h-[500px] w-auto  rounded-xl  "
