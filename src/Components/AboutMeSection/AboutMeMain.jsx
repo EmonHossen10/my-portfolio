@@ -1,10 +1,11 @@
-import React from "react";
+ 
 import AboutMeText from "./AboutMeText";
 import AboutMeImg from "./AboutMeImg";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 
 const AboutMeMain = () => {
+    
   return (
     <div
       id="about"
@@ -12,9 +13,9 @@ const AboutMeMain = () => {
     >
       <motion.div
         variants={fadeIn("down", 0.2)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.7 }}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.7 }}
       >
         <AboutMeText></AboutMeText>
       </motion.div>

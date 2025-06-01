@@ -7,8 +7,8 @@ const ProjectButtons = ({ liveLink, githubLink }) => {
       <a
         href={githubLink}
         target="_blank"
-        className="cursor-pointer     hover:underline  text-lightCyan  font-semibold py-2 rounded-lg  
-               hover:bg-gray-600 hover:scale-110 transform transition duration-300 ease-in-out
+        className="cursor-pointer   hover:underline  text-lightCyan  font-semibold py-2 rounded-lg  
+               hover:bg-gray-600 hover:scale-125 transform transition duration-300 ease-in-out
                flex justify-center items-center"
       >
         Github Link <LuSquareArrowOutUpRight className="ml-1" />
@@ -17,7 +17,7 @@ const ProjectButtons = ({ liveLink, githubLink }) => {
         href={liveLink}
         target="_blank"
         className="cursor-pointer     hover:underline  text-lightCyan  font-semibold py-2 rounded-lg  
-               hover:bg-gray-600 hover:scale-110 transform transition duration-300 ease-in-out
+               hover:bg-gray-600 hover:scale-125 transform transition duration-300 ease-in-out
                flex justify-center items-center"
       >
         Live Link <LuSquareArrowOutUpRight className="ml-1" />
