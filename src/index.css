@@ -8,7 +8,7 @@
 @tailwind utilities;
 /* here are some coloring added  */
 body {
-  @apply bg-darkBrown;
+  @apply bg-[#00091D];
   font-family: "JetBrains Mono", monospace;
 
 }

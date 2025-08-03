@@ -11,12 +11,10 @@ import SkillMain from "./Components/SkillsSections/SkillMain";
 import SubSkills from "./Components/SkillsSections/SubSkills";
 import SubHeroMain from "./Components/SubHero section/SubHeroMain";
 
-
 function App() {
   return (
     <div className="text-white">
       <main>
-   
         <NavbarMain></NavbarMain>
         <HeroMain></HeroMain>
         <HeroGradient></HeroGradient>
@@ -29,7 +27,6 @@ function App() {
         <ContactMeMain></ContactMeMain>
         <FooterMain></FooterMain>
         {/* here under is helper section */}
- 
       </main>
     </div>
   );
