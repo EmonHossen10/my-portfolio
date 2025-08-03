@@ -12,14 +12,14 @@ const ContactInfo = () => {
       <SingleInfo text="+880 1302-256625" Image={FiPhone} />
       <SingleInfo text="Gazipur, Bangladesh" Image={IoLocationOutline} />
       <a
-        className="underline transition-all duration-300 ease-in-out hover:underline hover:text-orange"
+        className="underline transition-all duration-300 ease-in-out hover:underline hover:text-cyan"
         target="_blank"
         href="https://www.linkedin.com/in/mohammademon92/"
       >
         <SingleInfo text="Linkedin" Image={FaLinkedin}></SingleInfo>
       </a>
       <a
-        className="underline transition-all duration-300 ease-in-out hover:underline hover:text-orange"
+        className="underline transition-all duration-300 ease-in-out hover:underline hover:text-cyan"
         target="_blank"
         href="https://github.com/EmonHossen10"
       >
