@@ -2,68 +2,82 @@
 
 ![Portfolio Screenshot](./public/images/frontImage.PNG)
 
-> A stunning showcase of my skills, projects, and professional journey as a full-stack developer
+> ✨ A vibrant showcase of my skills, projects, and professional journey as a full-stack developer ✨
 
-## 🌐 Live Deployment  
-<div align="center">
+---
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://my-portfolio-rouge-eight-67.vercel.app/)  
-[![Source Code](https://img.shields.io/badge/💻_Source_Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EmonHossen10/my-portfolio)
+## 🚀 Live Deployment  
+<div align="left">
 
-</div>
-
-## 🛠 Tech Stack
-
-### Frontend
-<div align="center">
-  
-| Technology | Badge | Purpose |
-|------------|-------|---------|
-| React.js | ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) | Core Framework |
-| Next.js | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) | SSR/SSG Support |
-| Tailwind CSS | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) | Utility-first Styling |
-| Framer Motion | ![Framer](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white) | Smooth Animations |
-| React Icons | ![React Icons](https://img.shields.io/badge/React_Icons-61DAFB?style=for-the-badge&logo=react&logoColor=white) | Beautiful Icons |
+[![Live Demo](https://img.shields.io/badge/-🚀%20Live%20Demo%20on%20Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white&labelColor=purple)](https://my-portfolio-rouge-eight-67.vercel.app/)  
+[![Source Code](https://img.shields.io/badge/-💻%20View%20Source%20Code-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=blue)](https://github.com/EmonHossen10/my-portfolio)
 
 </div>
 
-### Backend
-<div align="center">
-  
-| Technology | Badge | Purpose |
-|------------|-------|---------|
-| Node.js | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) | Runtime Environment |
+---
+
+## 🎨 Tech Stack
+
+### 🖥️ Frontend
+| Technology | Purpose | Badge |
+|------------|---------|-------|
+| **React.js** | Core Framework | ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white&labelColor=black) |
+| **Next.js** | SSR/SSG Support | ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white&labelColor=gray) |
+| **Tailwind CSS** | Utility-first Styling | ![Tailwind](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white&labelColor=teal) |
+| **Framer Motion** | Smooth Animations | ![Framer](https://img.shields.io/badge/-Framer%20Motion-0055FF?style=flat-square&logo=framer&logoColor=white&labelColor=blue) |
+| **React Icons** | Beautiful Icons | ![React Icons](https://img.shields.io/badge/-React%20Icons-61DAFB?style=flat-square&logo=react&logoColor=white&labelColor=darkblue) |
+
+### ⚙️ Backend
+| Technology | Purpose | Badge |
+|------------|---------|-------|
+| **Node.js** | Runtime Environment | ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white&labelColor=darkgreen) |
+
+---
+
+## ✨ Key Features
+
+<div align="left">
+
+🎨 **Stunning Design**  
+- Vibrant color scheme  
+- Modern UI/UX principles  
+- Fully responsive layout  
+
+⚡ **High Performance**  
+- 90+ Lighthouse score  
+- Optimized assets  
+- Fast page loads  
+
+📩 **Contact System**  
+- Working contact form  
+- Email notifications  
+- Spam protection  
+
+🔍 **SEO Optimized**  
+- Proper meta tags  
+- Semantic HTML  
+- Fast rendering  
 
 </div>
 
-## ✨ Highlights
+---
 
-<div align="center">
-
-📱 **Fully Responsive** - Flawless on all devices  
-📧 **Contact Form** - Direct client communication  
-🔍 **SEO Optimized** - Better search visibility  
-⚡ **Blazing Fast** - 90+ Lighthouse score  
-🎨 **Modern UI** - Clean, professional design  
-
-</div>
-
-## 🚀 Quick Start
+## 🛠️ Installation Guide
 
 ### Prerequisites
 - Node.js v18+
 - npm v9+
 
-### Installation
+### Setup Instructions
 ```bash
-# Clone the repository
+# Clone with colorful output
+echo -e "\033[1;36mCloning repository...\033[0m"
 git clone https://github.com/EmonHossen10/my-portfolio.git
 
-# Navigate to project directory
 cd portfolio
 
-# Install dependencies
+echo -e "\033[1;33mInstalling dependencies...\033[0m"
 npm install
 
-# Start development server
+echo -e "\033[1;32mStarting development server...\033[0m"
 npm run dev
