@@ -70,13 +70,13 @@
 ### Setup Instructions
 ```bash
 # Clone with colorful output
-echo -e "\033[1;36mCloning repository...\033[0m"
+echo -e 
 git clone https://github.com/EmonHossen10/my-portfolio.git
 
 cd portfolio
 
-echo -e "\033[1;33mInstalling dependencies...\033[0m"
+echo -e 
 npm install
 
-echo -e "\033[1;32mStarting development server...\033[0m"
+echo -e 
 npm run dev
