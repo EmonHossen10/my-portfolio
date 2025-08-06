@@ -1,6 +1,6 @@
 # MERN Stack Developer Portfolio
 
-![Portfolio Screenshot](./public/images/screenshot.jpg) <!-- Add a screenshot -->
+![Portfolio Screenshot](./public/images/frontImage.PNG) <!-- Add a screenshot -->
 
 ## 🔥 Live Demo  
 [![Vercel](https://img.shields.io/badge/View-Live%20Demo-brightgreen)](https://my-portfolio-rouge-eight-67.vercel.app/)  
