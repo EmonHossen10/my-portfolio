@@ -22,7 +22,6 @@
 | Technology | Purpose | Badge |
 |------------|---------|-------|
 | **React.js** | Core Framework | ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white&labelColor=black) |
-| **Next.js** | SSR/SSG Support | ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white&labelColor=gray) |
 | **Tailwind CSS** | Utility-first Styling | ![Tailwind](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white&labelColor=teal) |
 | **Framer Motion** | Smooth Animations | ![Framer](https://img.shields.io/badge/-Framer%20Motion-0055FF?style=flat-square&logo=framer&logoColor=white&labelColor=blue) |
 | **React Icons** | Beautiful Icons | ![React Icons](https://img.shields.io/badge/-React%20Icons-61DAFB?style=flat-square&logo=react&logoColor=white&labelColor=darkblue) |
