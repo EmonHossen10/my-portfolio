@@ -1,7 +1,8 @@
 # 🚀 MERN Stack Developer Portfolio
 
-![Portfolio Screenshot](./public/images/frontImg.PNG)
-![Portfolio Screenshot](https://raw.githubusercontent.com/EmonHossen10/my-portfolio/main/public/images/frontImg.PNG)
+
+
+![Portfolio Screenshot](https://raw.githubusercontent.com/EmonHossen10/my-portfolio/main/public/images/banner.PNG)
 
 > ✨ A vibrant showcase of my skills, projects, and professional journey as a full-stack developer ✨
 
