@@ -76,7 +76,7 @@ https://github.com/EmonHossen10/my-portfolio
 
 ## 📸 Preview
 
-![Portfolio Preview](https://raw.githubusercontent.com/EmonHossen10/my-portfolio/main/public/images/banner.PNG)
+![Portfolio Preview](https://raw.githubusercontent.com/EmonHossen10/my-portfolio/main/public/images/banner.jpg)
 
 ---
 
