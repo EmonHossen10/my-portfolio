@@ -1,6 +1,6 @@
 # 🚀 MERN Stack Developer Portfolio
 
-![Portfolio Screenshot](./public/images/frontImage.PNG)
+![Portfolio Screenshot](./public/images/frontImg.PNG)
 
 > ✨ A vibrant showcase of my skills, projects, and professional journey as a full-stack developer ✨
 
