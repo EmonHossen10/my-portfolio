@@ -1,25 +1,182 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* here are some coloring added  */
-body {
-  @apply bg-[#00091D];
-  font-family: "JetBrains Mono", monospace;
 
+html {
+  scroll-behavior: smooth;
 }
 
-/* Force the underline to show when active */
+:root {
+  --spotlight-c1: rgba(37, 99, 235, 0.08);
+  --spotlight-c2: rgba(124, 58, 237, 0.05);
+}
+
+/* ================= Dark & Light Base Styles ================= */
+html.dark {
+  color-scheme: dark;
+  --spotlight-c1: rgba(0, 245, 255, 0.07);
+  --spotlight-c2: rgba(168, 85, 247, 0.04);
+}
+
+html.dark body {
+  background-color: #030712;
+  color: #f8fafc;
+}
+
+html:not(.dark) {
+  color-scheme: light;
+}
+
+html:not(.dark) body {
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: rgba(0, 245, 255, 0.35);
+  color: #ffffff;
+}
+
+html:not(.dark) ::selection {
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #0F172A;
+}
+
+/* ================= Custom Scrollbars ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f5ff 0%, #a855f7 100%);
+  border-radius: 9999px;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2563EB 0%, #06B6D4 50%, #7C3AED 100%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #38bdf8 0%, #c084fc 100%);
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #1D4ED8 0%, #0891B2 50%, #6D28D9 100%);
+}
+
+/* ================= Glassmorphism Utilities ================= */
+html.dark .glass-panel {
+  background: rgba(11, 17, 32, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html:not(.dark) .glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(219, 234, 254, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.06), 0 8px 10px -6px rgba(124, 58, 237, 0.04);
+}
+
+html.dark .glass-nav {
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+html:not(.dark) .glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(219, 234, 254, 0.9);
+  box-shadow: 0 4px 20px -2px rgba(37, 99, 235, 0.06);
+}
+
+/* ================= Cyber Text Gradient ================= */
+.text-cyber-gradient {
+  background: linear-gradient(135deg, #00f5ff 0%, #38bdf8 45%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html:not(.dark) .text-cyber-gradient {
+  background: linear-gradient(135deg, #2563EB 0%, #06B6D4 45%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-purple-gradient {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html:not(.dark) .text-purple-gradient {
+  background: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= 3D Perspective Container ================= */
+.perspective-container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Active Nav Link */
+.active-link {
+  color: #00f5ff !important;
+  text-shadow: 0 0 12px rgba(0, 245, 255, 0.6);
+}
+
+html:not(.dark) .active-link {
+  color: #2563EB !important;
+  text-shadow: 0 0 16px rgba(37, 99, 235, 0.3);
+}
+
 .active-link + div {
   width: 100% !important;
+  box-shadow: 0 0 10px #00f5ff;
 }
 
-/* Optional: Style the active link text */
-.active-link {
-  color: #06b6d4 !important; /* Cyan text */
+html:not(.dark) .active-link + div {
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
 }
 
+/* Interactive Glowing Grid Background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+html:not(.dark) .cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}

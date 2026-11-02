@@ -1,16 +1,19 @@
 import HeroText from "./HeroText";
 import HeroPic from "./HeroPic";
+import HeroGradient from "./HeroGradient";
 
 const HeroMain = () => {
   return (
-    <>
-      <div className=" md:pt-40 pt-28 md:pb-16 pb-10 ">
-        <div className="flex md:flex-row gap-5 sm:flex-col max-w-[1200px] mx-auto justify-between items-center relative px-4">
-          <HeroText></HeroText>
-          <HeroPic></HeroPic>
+    <section id="hero" className="relative pt-32 sm:pt-36 lg:pt-44 pb-16 lg:pb-24 overflow-hidden">
+      <HeroGradient />
+      
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+          <HeroText />
+          <HeroPic />
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
