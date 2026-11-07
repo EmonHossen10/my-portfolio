@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import SkillText from "./SkillText";
-import Skills3DCanvas from "../3D/Skills3DCanvas";
 import TiltCard from "../Common/TiltCard";
 import { motion } from "framer-motion";
+
+const Skills3DCanvas = lazy(() => import("../3D/Skills3DCanvas"));
 import {
   FaReact,
   FaNodeJs,
@@ -187,7 +188,15 @@ const SkillMain = () => {
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
                 <span>LIVE IDE</span>
               </div>
-              <Skills3DCanvas />
+              <Suspense
+                fallback={
+                  <div className="w-full h-[340px] sm:h-[400px] lg:h-[430px] flex items-center justify-center font-mono text-xs text-[#2563EB] dark:text-cyan animate-pulse">
+                    [ INITIALIZING 3D WORKSTATION... ]
+                  </div>
+                }
+              >
+                <Skills3DCanvas />
+              </Suspense>
               <div className="text-center mt-2 px-4 py-2 rounded-xl bg-blue-50/60 dark:bg-white/[0.02] border border-blue-100 dark:border-white/5">
                 <p className="text-xs font-mono text-slate-600 dark:text-gray-300">
                   Interactive 3D Full-Stack Coding Studio & Cloud Ecosystem

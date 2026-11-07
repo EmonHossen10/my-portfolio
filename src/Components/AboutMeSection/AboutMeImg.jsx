@@ -20,6 +20,8 @@ const AboutMeImg = () => {
             className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
             src={image}
             alt="Mohammad Emon About"
+            loading="lazy"
+            decoding="async"
           />
 
           {/* Vignette gradient */}
