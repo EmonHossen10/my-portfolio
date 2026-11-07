@@ -17,6 +17,8 @@ const SingleProject = ({ project, index }) => {
         <img
           src={picture}
           alt={name}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
         />
 

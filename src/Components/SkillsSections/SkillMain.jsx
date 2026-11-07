@@ -174,19 +174,23 @@ const SkillMain = () => {
           ))}
         </div>
 
-        {/* Content Layout: 3D Constellation Sphere + Skills Grid */}
+        {/* Content Layout: 3D Developer Workstation + Skills Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left: 3D Tech Mesh Constellation */}
+          {/* Left: 3D Interactive Developer Workstation */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center">
             <div className="w-full rounded-3xl bg-white/90 dark:bg-slate-900/75 border border-blue-200/80 dark:border-cyan/20 p-4 shadow-[0_8px_30px_-5px_rgba(37,99,235,0.08)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.5)] relative overflow-hidden backdrop-blur-md">
-              <div className="absolute top-4 left-4 text-xs font-mono text-[#2563EB] dark:text-cyan flex items-center gap-2 font-medium">
+              <div className="absolute top-4 left-4 text-xs font-mono text-[#2563EB] dark:text-cyan flex items-center gap-2 font-medium z-10">
                 <span className="w-2 h-2 rounded-full bg-[#2563EB] dark:bg-cyan animate-pulse"></span>
-                <span>3D Node Network</span>
+                <span>3D Developer Workstation</span>
+              </div>
+              <div className="absolute top-4 right-4 text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded-full border border-emerald-300/50 dark:border-emerald-500/30 flex items-center gap-1 z-10">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                <span>LIVE IDE</span>
               </div>
               <Skills3DCanvas />
               <div className="text-center mt-2 px-4 py-2 rounded-xl bg-blue-50/60 dark:bg-white/[0.02] border border-blue-100 dark:border-white/5">
                 <p className="text-xs font-mono text-slate-600 dark:text-gray-300">
-                  Interactive WebGL Physics & Constellation Model
+                  Interactive 3D Full-Stack Coding Studio & Cloud Ecosystem
                 </p>
               </div>
             </div>

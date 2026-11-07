@@ -1,57 +1,76 @@
+import { lazy, Suspense } from "react";
 import "./App.css";
-import Background3D from "./Components/3D/Background3D";
-import CursorSpotlight from "./Components/Common/CursorSpotlight";
+
+// ── Always load immediately (above-the-fold critical path) ──────────────────
 import NavbarMain from "./Components/Navbar/NavbarMain";
 import HeroMain from "./Components/HeroSection/HeroMain";
-import SubHeroMain from "./Components/SubHero section/SubHeroMain";
-import AboutMeMain from "./Components/AboutMeSection/AboutMeMain";
-import SkillMain from "./Components/SkillsSections/SkillMain";
-import SubSkills from "./Components/SkillsSections/SubSkills";
-import ExperienceMain from "./Components/Experience Section/ExperienceMain";
-import ProjectMain from "./Components/ProjectSection/ProjectMain";
-import ContactMeMain from "./Components/ContactMe/ContactMeMain";
-import FooterMain from "./Components/Footer/FooterMain";
+import CursorSpotlight from "./Components/Common/CursorSpotlight";
+
+// ── Lazy load everything else (below-the-fold / heavy) ─────────────────────
+const Background3D   = lazy(() => import("./Components/3D/Background3D"));
+const SubHeroMain    = lazy(() => import("./Components/SubHero section/SubHeroMain"));
+const AboutMeMain    = lazy(() => import("./Components/AboutMeSection/AboutMeMain"));
+const SkillMain      = lazy(() => import("./Components/SkillsSections/SkillMain"));
+const SubSkills      = lazy(() => import("./Components/SkillsSections/SubSkills"));
+const ExperienceMain = lazy(() => import("./Components/Experience Section/ExperienceMain"));
+const ProjectMain    = lazy(() => import("./Components/ProjectSection/ProjectMain"));
+const ContactMeMain  = lazy(() => import("./Components/ContactMe/ContactMeMain"));
+const FooterMain     = lazy(() => import("./Components/Footer/FooterMain"));
+
+// Minimal fallback — invisible, no layout shift
+const Noop = () => null;
 
 function App() {
   return (
     <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#030712] text-[#0F172A] dark:text-slate-100 selection:bg-blue-500/20 selection:text-[#0F172A] dark:selection:bg-cyan dark:selection:text-black relative overflow-x-hidden font-body transition-colors duration-300">
-      {/* Interactive 3D Three.js Starfield / Cosmic Particle Background */}
-      <Background3D />
+      {/* 3D Background — lazy, non-blocking */}
+      <Suspense fallback={<Noop />}>
+        <Background3D />
+      </Suspense>
 
-      {/* Interactive Cursor Spotlight Glow */}
+      {/* Cursor — lightweight, load immediately */}
       <CursorSpotlight />
 
-      {/* Floating Modern Capsule Navbar with Reading Progress */}
+      {/* Navbar — critical, load immediately */}
       <NavbarMain />
 
       <main className="relative z-10 flex flex-col">
-        {/* Hero Section with Interactive 3D Cyber Core & Switchable Hologram Profile */}
+        {/* Hero — critical, load immediately */}
         <HeroMain />
 
-        {/* Live Metrics Grid & Core Trait Pills */}
-        <SubHeroMain />
+        {/* Everything below is below-the-fold — lazy */}
+        <Suspense fallback={<Noop />}>
+          <SubHeroMain />
+        </Suspense>
 
-        {/* About Me Section with 3D Tilt Card and Engineering Pillars */}
-        <AboutMeMain />
+        <Suspense fallback={<Noop />}>
+          <AboutMeMain />
+        </Suspense>
 
-        {/* Interactive Skills Universe with 3D Node Mesh & Category Filters */}
-        <SkillMain />
+        <Suspense fallback={<Noop />}>
+          <SkillMain />
+        </Suspense>
 
-        {/* Dynamic Tech Marquee */}
-        <SubSkills />
+        <Suspense fallback={<Noop />}>
+          <SubSkills />
+        </Suspense>
 
-        {/* Career Trajectory & Milestones Timeline with 3D Tilt Cards */}
-        <ExperienceMain />
+        <Suspense fallback={<Noop />}>
+          <ExperienceMain />
+        </Suspense>
 
-        {/* Production Projects Showcase with 3D Tilt Cards */}
-        <ProjectMain />
+        <Suspense fallback={<Noop />}>
+          <ProjectMain />
+        </Suspense>
 
-        {/* Contact Hub with Click-to-Copy & EmailJS Confetti Form */}
-        <ContactMeMain />
+        <Suspense fallback={<Noop />}>
+          <ContactMeMain />
+        </Suspense>
       </main>
 
-      {/* Cyber Footer with Scroll-to-Top */}
-      <FooterMain />
+      <Suspense fallback={<Noop />}>
+        <FooterMain />
+      </Suspense>
     </div>
   );
 }

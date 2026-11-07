@@ -27,12 +27,14 @@ const Background3D = () => {
       powerPreference: "high-performance",
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1)); // cap at 1× for bg
     renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);
 
-    // Particle geometries
-    const particleCount = 1400;
+    // Adapt particle count to device performance
+    const isMobile = window.innerWidth < 768;
+    const isLowEnd = navigator.hardwareConcurrency <= 2;
+    const particleCount = isMobile || isLowEnd ? 400 : 900;
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
@@ -147,11 +149,11 @@ const Background3D = () => {
 
     // Animation loop
     let animationFrameId;
-    let clock = new THREE.Clock();
+    const startTime = performance.now();
 
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
-      const elapsedTime = clock.getElapsedTime();
+      const elapsedTime = (performance.now() - startTime) / 1000;
 
       mouseX += (targetX - mouseX) * 0.05;
       mouseY += (targetY - mouseY) * 0.05;

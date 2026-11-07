@@ -19,10 +19,12 @@ const HeroPic = () => {
       {/* Main Profile Card Container */}
       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-white/90 dark:bg-slate-900/70 border border-blue-200/80 dark:border-cyan/30 p-3 shadow-[0_15px_35px_-5px_rgba(37,99,235,0.12)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.6)] backdrop-blur-md group transition-colors duration-300">
         <div className="relative w-full h-full rounded-2xl overflow-hidden">
-          {/* Portrait Image */}
+          {/* Portrait Image — LCP critical: fetchpriority high */}
           <img
             src={img}
             alt="Mohammad Emon"
+            fetchpriority="high"
+            decoding="async"
             className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
           />
 
